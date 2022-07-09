@@ -1,4 +1,5 @@
 import { PrismaClient } from '@prisma/client';
+import { flowbite } from './flowbite';
 const prisma = new PrismaClient();
 
 const libraries = [
@@ -17,6 +18,15 @@ async function main() {
       update: {},
       create: {
         title,
+      },
+    });
+  }
+
+  for await (const name of flowbite) {
+    await prisma.component.create({
+      data: {
+        name,
+        libraryTitle: 'Flowbite React',
       },
     });
   }

@@ -11,11 +11,15 @@ datasource db {
 }
 
 model Library {
-  id    Int    @id @default(autoincrement())
-  title String @unique
+  id         Int         @id @default(autoincrement())
+  title      String      @unique
+  components Component[]
 }
 
 model Component {
   id   Int    @id @default(autoincrement())
   name String
+
+  Library      Library? @relation(fields: [libraryTitle], references: [title])
+  libraryTitle String?
 }
