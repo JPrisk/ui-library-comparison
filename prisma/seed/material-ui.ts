@@ -1,4 +1,4 @@
-const materialUi = [
+export const materialUI = [
   'autocomplete',
   'button',
   'button group',

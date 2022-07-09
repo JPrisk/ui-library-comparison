@@ -11,7 +11,7 @@
     "dev": "ts-node ./script.ts"
   },
   "prisma": {
-    "seed": "ts-node prisma/seed.ts"
+    "seed": "ts-node prisma/seed/index.ts"
   },
   "dependencies": {
     "@prisma/client": "^4.0.0"

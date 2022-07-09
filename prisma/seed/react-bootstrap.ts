@@ -1,5 +1,5 @@
 // contains form / layout components that aren't included here
-const reactBootstrap = [
+export const reactBootstrap = [
   'alerts',
   'accordion',
   'badge',
