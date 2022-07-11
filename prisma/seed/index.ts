@@ -27,7 +27,7 @@ const libraryList: Record<LibraryType, string[]> = {
 };
 
 async function main() {
-  for await (const library of Object.keys(libraryList)) {
+  for (const library in libraryList) {
     await prisma.library.upsert({
       where: { title: library },
       update: {},
